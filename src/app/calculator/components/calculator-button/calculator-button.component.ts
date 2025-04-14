@@ -13,7 +13,7 @@ import { Component, ElementRef, HostBinding, input, output, signal, viewChild, V
 })
 export class CalculatorButtonComponent {
 
-  public isPressed =signal(false);
+  public isPressed = signal(false);
 
   public onClick = output<string>();
 
