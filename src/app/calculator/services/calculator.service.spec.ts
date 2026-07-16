@@ -78,6 +78,28 @@ describe('CalculatorService', () => {
 
   });
 
+  it('should calculate result correctly for multiplication', () => {
+
+    service.constructNumber('6');
+    service.constructNumber('x');
+    service.constructNumber('7');
+    service.constructNumber('=');
+
+    expect(service.resultText()).toBe('42');
+
+  });
+
+  it('should calculate result correctly for division', () => {
+
+    service.constructNumber('8');
+    service.constructNumber('÷');
+    service.constructNumber('2');
+    service.constructNumber('=');
+
+    expect(service.resultText()).toBe('4');
+
+  });
+
   it('should handle sign change correctly', () => {
 
     service.constructNumber('1');
